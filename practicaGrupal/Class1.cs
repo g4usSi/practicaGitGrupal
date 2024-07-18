@@ -64,7 +64,16 @@ namespace practicaGrupal
             Console.WriteLine("El resultado de la division es: "+resultado);
         }
         //Henry
-
+        public void Potencia()
+        {
+            double resultado = Math.Pow(numeroPrimero, numeroSegundo);
+            Console.WriteLine("EL RESULTADO DE LA POTENCIA ES: [ " + resultado +" ]");
+        }
+        public void Radical()
+        {
+            double resultado = Math.Sqrt(numeroPrimero);
+            Console.WriteLine("EL RESULTADO DE LA RAIZ CUBICA ES: [ " + resultado + " ]");
+        }
 
 
     }
