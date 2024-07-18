@@ -1,9 +1,8 @@
 ﻿using practicaGrupal;
 
 class Program {
-
-
     public static void Main(String[] args)
+
     {
         Operaciones operacion = new Operaciones();
         double numeroIntroducido1;
@@ -12,8 +11,6 @@ class Program {
 
         static void PedirNumeros()
         {
-
-
             operacion.Pedir();
             Console.WriteLine("Menu");
             Console.WriteLine("[1] Suma");
@@ -31,6 +28,7 @@ class Program {
                 case 1:
                     Console.WriteLine("[1] Suma");
                     operacion.Suma();
+
                     break;
                 case 2:
                     Console.WriteLine("[2] Resta");
@@ -60,4 +58,3 @@ class Program {
             }
         } while (opcionMenu != 7);
     }
-}

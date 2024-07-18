@@ -56,6 +56,7 @@ public void Resta()
             double resultado = numeroPrimero / numeroSegundo;
             Console.WriteLine("El resultado de la division es: "+resultado);
         }
+
         //Henry
         public void Potencia()
         {
