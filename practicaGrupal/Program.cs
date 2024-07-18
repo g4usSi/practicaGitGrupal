@@ -1,7 +1,7 @@
 ﻿using practicaGrupal;
 
 class Program {
-    public static void main(String[] args)
+    public static void Main(String[] args)
     {
         Operaciones operacion = new Operaciones();
         int numeroIntroducido1;
@@ -11,17 +11,7 @@ class Program {
         Console.WriteLine("Calculadora...");
         do
         {
-            do {
-                Console.WriteLine("Introduzca el primer numero: ");
-                numeroIntroducido1 = Convert.ToInt32(Console.ReadLine());
-
-                Console.WriteLine("Introduzca el segundo numero: ");
-                numeroIntroducido2 = Convert.ToInt32(Console.ReadLine());
-                if ((numeroIntroducido1 < 0) && (numeroIntroducido2 < 0)) 
-                {
-                    Console.WriteLine("No puede ingresar numeros negativos...");
-                }
-            } while ((numeroIntroducido1 < 0)&&(numeroIntroducido2<0));
+           
 
 
             Console.WriteLine("Menu");
@@ -38,7 +28,7 @@ class Program {
             {
                 //Jenny
                 case 1:
-
+                    operacion.Suma();
                     break;
                 case 2:
                     break;
@@ -58,3 +48,4 @@ class Program {
         } while (opcionMenu != 7);
     }
 }
+
