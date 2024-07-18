@@ -1,29 +1,18 @@
 ﻿using practicaGrupal;
 
 class Program {
-    public static void main(String[] args)
+
+    public static void Main(String[] args)
     {
         Operaciones operacion = new Operaciones();
-        int numeroIntroducido1;
-        int numeroIntroducido2;
+        double numeroIntroducido1;
+        double numeroIntroducido2;
         int opcionMenu;
 
-        Console.WriteLine("Calculadora...");
-        do
+        static void PedirNumeros()
         {
-            do {
-                Console.WriteLine("Introduzca el primer numero: ");
-                numeroIntroducido1 = Convert.ToInt32(Console.ReadLine());
 
-                Console.WriteLine("Introduzca el segundo numero: ");
-                numeroIntroducido2 = Convert.ToInt32(Console.ReadLine());
-                if ((numeroIntroducido1 < 0) && (numeroIntroducido2 < 0)) 
-                {
-                    Console.WriteLine("No puede ingresar numeros negativos...");
-                }
-            } while ((numeroIntroducido1 < 0)&&(numeroIntroducido2<0));
-
-
+            operacion.Pedir();
             Console.WriteLine("Menu");
             Console.WriteLine("[1] Suma");
             Console.WriteLine("[2] Resta");
@@ -41,11 +30,17 @@ class Program {
 
                     break;
                 case 2:
+
                     break;
                 //Geo
                 case 3:
+                    Console.WriteLine("[3] Multiplicacion");
+                    operacion.Multiplicacion();
                     break;
                 case 4:
+                    Console.WriteLine("[4] Division");
+                    operacion.Division();
+
                     break;
                 //Henry
                 case 5:
