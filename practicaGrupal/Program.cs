@@ -29,6 +29,7 @@ class Program {
             {
                 //Jenny
                 case 1:
+                    Console.WriteLine("[1] Suma");
                     operacion.Suma();
                     break;
                 case 2:
