@@ -1,16 +1,17 @@
 ﻿using practicaGrupal;
 
 class Program {
+
     public static void Main(String[] args)
     {
         Operaciones operacion = new Operaciones();
-        int numeroIntroducido1;
-        int numeroIntroducido2;
+        double numeroIntroducido1;
+        double numeroIntroducido2;
         int opcionMenu;
 
-        Console.WriteLine("Calculadora...");
-        do
+        static void PedirNumeros()
         {
+
             operacion.Pedir();
             Console.WriteLine("Menu");
             Console.WriteLine("[1] Suma");
@@ -29,6 +30,7 @@ class Program {
 
                     break;
                 case 2:
+
                     break;
                 //Geo
                 case 3:
@@ -38,6 +40,7 @@ class Program {
                 case 4:
                     Console.WriteLine("[4] Division");
                     operacion.Division();
+
                     break;
                 //Henry
                 case 5:

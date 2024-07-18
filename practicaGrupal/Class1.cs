@@ -39,6 +39,18 @@ namespace practicaGrupal
         }
 
 
+        //Jenny
+
+
+        //Geo
+        public void Multiplicacion(double numeroUno, double numeroDos) {
+            Console.WriteLine("El resultado de la division es:" );
+        }
+        public void Division(double numeroUno, double numeroDos) {
+            Console.WriteLine("El resultado de primer numero: ");
+
+
+        }
 
         //Geo
         public void Multiplicacion()
