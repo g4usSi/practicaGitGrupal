@@ -40,7 +40,18 @@ namespace practicaGrupal
 
 
         //Jenny
+public void Suma()
+{
+    double resultado= numeroPrimero+ numeroSegundo;
+    Console.WriteLine("El resultado de la suma es:"+resultado);
+   
+}
+public void Resta()
+{
+    double resultado = numeroPrimero - numeroSegundo;
+    Console.WriteLine("El resultado de la resta es:" + resultado);
 
+}
 
         //Geo
         public void Multiplicacion(double numeroUno, double numeroDos) {
