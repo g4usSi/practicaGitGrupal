@@ -1,6 +1,7 @@
 ﻿using practicaGrupal;
 
-class Program {
+class Program
+{
     public static void Main(String[] args)
 
     {
@@ -54,7 +55,8 @@ class Program {
                     operacion.Radical();
                     break;
                 default:
-                break;       
+                    break;
             }
-        } while (opcionMenu != 7);
+        } while (opcionMenu != 7) ;
     }
+}
