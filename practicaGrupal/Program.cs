@@ -2,6 +2,7 @@
 
 class Program {
 
+
     public static void Main(String[] args)
     {
         Operaciones operacion = new Operaciones();
@@ -11,6 +12,7 @@ class Program {
 
         static void PedirNumeros()
         {
+
 
             operacion.Pedir();
             Console.WriteLine("Menu");
@@ -27,7 +29,6 @@ class Program {
             {
                 //Jenny
                 case 1:
-                    Console.WriteLine("[3] Suma");
                     operacion.Suma();
                     break;
                 case 2:
