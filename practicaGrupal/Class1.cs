@@ -27,6 +27,7 @@ namespace practicaGrupal
                     Console.WriteLine("No puede ingresar numeros negativos...");
                 }
             } while ((numeroIntroducido1 < 0) && (numeroIntroducido2 < 0));
+
             numeroPrimero = numeroIntroducido1;
             numeroSegundo = numeroIntroducido2;
         }
@@ -37,8 +38,14 @@ namespace practicaGrupal
             Console.WriteLine("El resultado de la suma es:"+resultado);
            
         }
+        public void Resta()
+        {
+            double resultado = numeroPrimero - numeroSegundo;
+            Console.WriteLine("El resultado de la resta es:" + resultado);
 
-       
+        }
+
+
 
         //Geo
 
