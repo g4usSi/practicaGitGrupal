@@ -27,10 +27,12 @@ class Program {
             {
                 //Jenny
                 case 1:
-
+                    Console.WriteLine("[3] Suma");
+                    operacion.Suma();
                     break;
                 case 2:
-
+                    Console.WriteLine("[2] Resta");
+                    operacion.Resta();
                     break;
                 //Geo
                 case 3:
