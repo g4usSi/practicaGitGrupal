@@ -2,7 +2,7 @@
 
 class Program {
 
-    public static void main(String[] args)
+    public static void Main(String[] args)
     {
         Operaciones operacion = new Operaciones();
         double numeroIntroducido1;
@@ -11,25 +11,8 @@ class Program {
 
         static void PedirNumeros()
         {
-            double numeroIntroducido1;
-            double numeroIntroducido2;
-            do
-            {
-                Console.WriteLine("Introduzca el primer numero: ");
-                Console.WriteLine("");
-                numeroIntroducido1 = Convert.ToDouble(Console.ReadLine());
 
-                Console.WriteLine("Introduzca el segundo numero: ");
-                numeroIntroducido2 = Convert.ToDouble(Console.ReadLine());
-                if ((numeroIntroducido1 < 0) && (numeroIntroducido2 < 0))
-                {
-                    Console.WriteLine("No puede ingresar numeros negativos...");
-                }
-            } while ((numeroIntroducido1 < 0) && (numeroIntroducido2 < 0));
-        }
-        Console.WriteLine("Calculadora...");
-        do
-        {
+            operacion.Pedir();
             Console.WriteLine("Menu");
             Console.WriteLine("[1] Suma");
             Console.WriteLine("[2] Resta");
@@ -51,9 +34,12 @@ class Program {
                     break;
                 //Geo
                 case 3:
-
+                    Console.WriteLine("[3] Multiplicacion");
+                    operacion.Multiplicacion();
                     break;
                 case 4:
+                    Console.WriteLine("[4] Division");
+                    operacion.Division();
 
                     break;
                 //Henry
