@@ -49,8 +49,12 @@ class Program {
                     break;
                 //Henry
                 case 5:
+                    Console.WriteLine("[5] Potencia");
+                    operacion.Potencia();
                     break;
                 case 6:
+                    Console.WriteLine("[6] Raíz Cuadrada");
+                    operacion.Radical();
                     break;
                 default:
                 break;       
