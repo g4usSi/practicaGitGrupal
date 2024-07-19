@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 namespace practicaGrupal
 {
     internal class Operaciones
-
     {
         double numeroPrimero { get; set; }
         double numeroSegundo { get; set; }
@@ -16,16 +15,30 @@ namespace practicaGrupal
         {
             bool condicion = true;
             while(condicion){
-                try
-                {
+
                     double numeroIntroducido1 = 0, numeroIntroducido2 = 0;
                     do
                     {
-                    Console.Write("> Introduzca el primer numero: ");
-                    numeroIntroducido1 = Convert.ToInt32(Console.ReadLine());
-
+                        Console.Write("> Introduzca el primer numero: ");
+                    try
+                    {
+                        numeroIntroducido1 = Convert.ToInt32(Console.ReadLine());
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("ERROR INESPERADO, VERIFIQUE LA ENTRADA... \n" + ex);
+                        Console.WriteLine();
+                    }
                     Console.Write("> Introduzca el segundo numero: ");
-                    numeroIntroducido2 = Convert.ToInt32(Console.ReadLine());
+                    try
+                    {
+                        numeroIntroducido2 = Convert.ToInt32(Console.ReadLine());
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("ERROR INESPERADO, VERIFIQUE LA ENTRADA... \n" + ex);
+                        Console.WriteLine();
+                    }
                         if ((numeroIntroducido1 <= 0) && (numeroIntroducido2 <= 0))
                         {
                             Console.WriteLine("No puede ingresar numeros negativos...");
@@ -35,12 +48,7 @@ namespace practicaGrupal
                 numeroPrimero = numeroIntroducido1;
                 numeroSegundo = numeroIntroducido2;
                     condicion = false;
-                }
-                catch(Exception ex)
-                {
-                    Console.WriteLine("ERROR INESPERADO, VERIFIQUE LA ENTRADA... " + ex);
-                    Console.WriteLine();
-                }
+      
             }
             Console.WriteLine();
         }
@@ -49,13 +57,13 @@ namespace practicaGrupal
 public void Suma()
 {
     double resultado= numeroPrimero+ numeroSegundo;
-    Console.WriteLine("El resultado de la suma es:"+resultado);
+    Console.WriteLine("El resultado de la suma es: "+resultado);
    
 }
 public void Resta()
 {
     double resultado = numeroPrimero - numeroSegundo;
-    Console.WriteLine("El resultado de la resta es:" + resultado);
+    Console.WriteLine("El resultado de la resta es: " + resultado);
 
 }
 
@@ -82,7 +90,5 @@ public void Resta()
             double resultado = Math.Sqrt(numeroPrimero);
             Console.WriteLine("EL RESULTADO DE LA RAIZ CUBICA ES: [ " + resultado + " ]");
         }
-
-
     }
 }
