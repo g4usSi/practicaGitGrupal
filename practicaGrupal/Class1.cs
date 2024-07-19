@@ -16,39 +16,38 @@ namespace practicaGrupal
             bool condicion = true;
             while(condicion){
 
-                    double numeroIntroducido1 = 0, numeroIntroducido2 = 0;
+                double numeroIntroducido1 = 0, numeroIntroducido2 = 0;
                     do
                     {
-                        Console.Write("> Introduzca el primer numero: ");
-                    try
-                    {
-                        numeroIntroducido1 = Convert.ToInt32(Console.ReadLine());
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("ERROR INESPERADO, VERIFIQUE LA ENTRADA... \n" + ex);
-                        Console.WriteLine();
-                    }
-                    Console.Write("> Introduzca el segundo numero: ");
-                    try
-                    {
-                        numeroIntroducido2 = Convert.ToInt32(Console.ReadLine());
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("ERROR INESPERADO, VERIFIQUE LA ENTRADA... \n" + ex);
-                        Console.WriteLine();
-                    }
-                        if ((numeroIntroducido1 <= 0) && (numeroIntroducido2 <= 0))
+                    Console.Write("> Introduzca el primer numero: ");
+                        try
                         {
-                            Console.WriteLine("No puede ingresar numeros negativos...");
+                            numeroIntroducido1 = Convert.ToInt32(Console.ReadLine());
                         }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("ERROR INESPERADO, VERIFIQUE LA ENTRADA... \n" + ex);
+                            Console.WriteLine();
+                        }
+
+                    Console.Write("> Introduzca el segundo numero: ");
+                        try
+                        {
+                            numeroIntroducido2 = Convert.ToInt32(Console.ReadLine());
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("ERROR INESPERADO, VERIFIQUE LA ENTRADA... \n" + ex);
+                            Console.WriteLine();
+                        }
+                    if ((numeroIntroducido1 > 0) && (numeroIntroducido2 > 0))
+                    {
+                       condicion = false;
+                    }
                     } while ((numeroIntroducido1 <= 0) && (numeroIntroducido2 <= 0));
                 
                 numeroPrimero = numeroIntroducido1;
                 numeroSegundo = numeroIntroducido2;
-                    condicion = false;
-      
             }
             Console.WriteLine();
         }
