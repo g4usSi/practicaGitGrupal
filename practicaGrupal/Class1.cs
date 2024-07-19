@@ -11,10 +11,13 @@ namespace practicaGrupal
     {
         double numeroPrimero { get; set; }
         double numeroSegundo { get; set; }
-
+// METODO ALTERADO ----------------------------------------------------------------------------------
         public void Pedir()
 
         {
+            bool condicion = true;
+            while(condicion){
+                try{
             double numeroIntroducido1 = 0, numeroIntroducido2 = 0;
             do
             {
@@ -30,7 +33,14 @@ namespace practicaGrupal
             } while ((numeroIntroducido1 <= 0) && (numeroIntroducido2 <= 0));
             numeroPrimero = numeroIntroducido1;
             numeroSegundo = numeroIntroducido2;
+                condicion = false
+                    }catch(Exception ex)
+                        {
+                    Console.WriteLine("ERROR INESPERADO, VERIFIQUE LA ENTRADA");
+                        }
+            }
         }
+//HASTA ACA -------------------------------------------------------------------------------------------------
 //Jenny
 public void Suma()
 {
