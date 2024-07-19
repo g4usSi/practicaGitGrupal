@@ -2,16 +2,13 @@
 
 class Program
 {
-    public static void Main(String[] args)
-
-    {
+    public static void Main(String[] args) {
         Operaciones operacion = new Operaciones();
-        double numeroIntroducido1;
-        double numeroIntroducido2;
         int opcionMenu;
-
-        static void PedirNumeros()
+        do
         {
+            Console.WriteLine("\nCALCULADORA");
+            Console.WriteLine("A continuacion introduzca los numeros a operar [cant: 2]");
             operacion.Pedir();
             Console.WriteLine("Menu");
             Console.WriteLine("[1] Suma");
@@ -21,8 +18,26 @@ class Program
             Console.WriteLine("[5] Potencia");
             Console.WriteLine("[6] Raiz");
             Console.WriteLine("[7] Salir");
-            Console.WriteLine("Ingrese una opcion: ");
-            opcionMenu = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Ingrese una opcion: ");
+
+            try
+            {
+                opcionMenu = Convert.ToInt32(Console.ReadLine());
+            }
+            catch (FormatException ex)
+            {
+                Console.WriteLine("Error solo puede introducir letras... \n" + ex);
+                opcionMenu = 10;
+                continue;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error inesperado... \n" + ex);
+                opcionMenu = 10;
+                continue;
+            }
+
+            Console.WriteLine();
             switch (opcionMenu)
             {
                 //Jenny
@@ -55,7 +70,12 @@ class Program
                     operacion.Radical();
                     break;
                 default:
-                    break;
+                    Console.WriteLine("Opcion incorrecta...");
+                    Console.WriteLine("Presione cualquier tecla para continuar...");
+                    Console.ReadLine();
+                    Console.Clear();
+                    Console.WriteLine("REGRESANDO AL MENU");
+                break;
             }
         } while (opcionMenu != 7) ;
     }

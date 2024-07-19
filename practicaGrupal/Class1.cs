@@ -13,32 +13,36 @@ namespace practicaGrupal
         double numeroSegundo { get; set; }
 // METODO ALTERADO ----------------------------------------------------------------------------------
         public void Pedir()
-
         {
             bool condicion = true;
             while(condicion){
-                try{
-            double numeroIntroducido1 = 0, numeroIntroducido2 = 0;
-            do
-            {
-                Console.WriteLine("Introduzca el primer numero: ");
-                numeroIntroducido1 = Convert.ToInt32(Console.ReadLine());
-
-                Console.WriteLine("Introduzca el segundo numero: ");
-                numeroIntroducido2 = Convert.ToInt32(Console.ReadLine());
-                if ((numeroIntroducido1 <= 0) && (numeroIntroducido2 <= 0))
+                try
                 {
-                    Console.WriteLine("No puede ingresar numeros negativos...");
-                }
-            } while ((numeroIntroducido1 <= 0) && (numeroIntroducido2 <= 0));
-            numeroPrimero = numeroIntroducido1;
-            numeroSegundo = numeroIntroducido2;
-                condicion = false
-                    }catch(Exception ex)
+                    double numeroIntroducido1 = 0, numeroIntroducido2 = 0;
+                    do
+                    {
+                    Console.Write("> Introduzca el primer numero: ");
+                    numeroIntroducido1 = Convert.ToInt32(Console.ReadLine());
+
+                    Console.Write("> Introduzca el segundo numero: ");
+                    numeroIntroducido2 = Convert.ToInt32(Console.ReadLine());
+                        if ((numeroIntroducido1 <= 0) && (numeroIntroducido2 <= 0))
                         {
-                    Console.WriteLine("ERROR INESPERADO, VERIFIQUE LA ENTRADA");
+                            Console.WriteLine("No puede ingresar numeros negativos...");
                         }
+                    } while ((numeroIntroducido1 <= 0) && (numeroIntroducido2 <= 0));
+                
+                numeroPrimero = numeroIntroducido1;
+                numeroSegundo = numeroIntroducido2;
+                    condicion = false;
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine("ERROR INESPERADO, VERIFIQUE LA ENTRADA... " + ex);
+                    Console.WriteLine();
+                }
             }
+            Console.WriteLine();
         }
 //HASTA ACA -------------------------------------------------------------------------------------------------
 //Jenny
